@@ -1,20 +1,30 @@
 :root {
     --text-color: #b97f6d;
     --background-color: #ededee;
+    --transition-color: #dab0a2;
 }
 body {
     background-color: var(--background-color);
     margin: 25px 65px 25px 45px;
 }
 header {
+    grid-column: 1;
+}
+
+.name{
     color: var(--text-color);
     font-family: 'Fjalla One', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 20px;
-    grid-column: 1;
+    background: transparent;
+    border: 0px;
+    padding: 0px;
 }
 
+.name:hover{
+    color: var(--transition-color);
+}
 .head {
     width: 100%;
     display: grid;
@@ -30,14 +40,23 @@ header {
 .navbarmenu{
     display: table-cell;
     text-align: right;
-    color: var(--text-color);
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-size: 14px;
     vertical-align: middle;
     padding: 5px 0px 5px 0px;
 }
 
+.navbarbutton{
+    color: var(--text-color);
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    background: transparent;
+    border: 0px;
+    padding: 0px;
+}
+
+.navbarbutton:hover{
+    color: var(--transition-color);
+}
 #home {
     grid-column: 1;
 }
@@ -50,11 +69,15 @@ header {
     grid-column: 3;
 }
 
+#current{
+    color: black;
+}
+
 .search{
     padding-bottom: 10px;
 }
 .searchbar{
-    width: 97.5%;
+    width: 97%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-size: 14px;
