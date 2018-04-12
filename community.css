@@ -116,7 +116,7 @@ header {
     border: 1px solid;
 }
 
-.cuisine{
+.category{
     grid-column: 1;
 }
 
@@ -125,76 +125,54 @@ header {
     padding: 10px 0px 10px 35px;
 }
 
-#cuisine{
-    grid-column: 1;
-}
-
-#time{
-    grid-column: 2;
-}
-
-#difficulty{
-    grid-column: 3;
-}
-
 .content{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-gap: 30px 40px;
     padding: 10px 0px 10px 0px;
 }
 
-.fooditem{
+.post{
     width: 100%;
-    height: 380px;
-}
-
-.foodtitle{
-    display: table-cell;
-    padding: 20px 105px 20px 105px;
-    background-color: white;
-    height: 15%;
-    width: 100%;
-    text-align: center;
-    vertical-align: middle;
-    color: var(--text-color);
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-size: 16px;
-}
-
-.foodpic{
-    width: 100%;
-    height: 70%;
-    /* border-image-width: 0px; */
-}
-
-.foodfooter{
-    width: 100%;
-    height: 15%;
-    background-color: white;
+    height: 150px;
+    grid-template-columns: 150px 1fr;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+}
+
+.postpic{
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+
 }
 
 img {
-    width:100%;
+    width:auto;
     max-height:100%;
 }
 
-.footerinfo{
-    text-align: center;
-    vertical-align: middle;
+.posttitle{
+    color: gray;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    padding: 10px 5px 0px 5px;
+}
+
+.postdescription{
     color: var(--text-color);
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 16px;
-    padding: 20px 0px 20px 0px;
+    font-size: 14px;
+    padding: 5px;
+    text-align: justify;
 }
 
-#foodcuisine{
-    vertical-align: middle;
-    display: table-cell;
-    padding: 20px 0px 20px 0px;
+.postfooter{
+    color: gray;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    padding: 5px 5px 0px 5px;
 }
