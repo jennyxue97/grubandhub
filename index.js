@@ -30,8 +30,8 @@ function submitForm(){
 }
 
 function displayShrimpFriedRice(){
-    document.getElementById("content").innerHTML = "<div class='fooditem'> <div class='foodtitle'> <a href='community.html'>SHRIMP FRIED RICE</a> </div> " + 
-    "<div class='foodpic'> <img id='food' src='assets/shrimp_fried_rice.jpg'> </div> " + 
+    document.getElementById("content").innerHTML = "<div class='fooditem'> <div class='foodtitle'> <a href='courseChapter2.html'>SHRIMP FRIED RICE</a> </div> " + 
+    "<div class='foodpic'> <a href='courseChapter2.html'><img id='food' src='assets/shrimp_fried_rice.jpg'> </div> </a> " + 
     "<div class='foodfooter'> <div class='footerinfo' id='foodcuisine'> CHINESE </div>" + 
     "<div class='footerinfo' id='fooddifficulty'> INTERMEDIATE </div> <div class='footerinfo' id='fooddifficulty'>" +
     "45 MIN </div> </div> </div>"
