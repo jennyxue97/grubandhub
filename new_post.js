@@ -34,8 +34,9 @@ function url() {
     if (input.files !== undefined) {
         var reader = new FileReader();
         reader.onload = function (e) {
-            Util.one('#user-image').setAttribute("src", e.target.result);
-            Util.one('#user-image').classList.add("visible");
+            var image = Util.one('.user-image');
+            image.setAttribute("src", e.target.result);
+            image.classList.add("visible");
         };
         reader.readAsDataURL(input.files[0]);
     }
