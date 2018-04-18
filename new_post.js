@@ -20,10 +20,12 @@ https://www.w3schools.com/howto/howto_css_overlay.asp
  */
 function overlay_on() {
     document.getElementById("overlay").style.display = "flex";
+    document.body.style.overflow = "hidden";
 }
 
 function overlay_off() {
     document.getElementById("overlay").style.display = "none";
+    document.body.style.overflow = "auto";
 }
 
 /*
