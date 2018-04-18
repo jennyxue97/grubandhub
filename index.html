@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway" rel="stylesheet">
+    <script src="index.js"></script>
     <html lang="en">
 </head>
 <body>
@@ -25,8 +26,11 @@
     </div>
 
     <div class="search">
-        <img class="searchicon" src="search_icon.png">
-        <input class="searchbar" type="text" placeholder="What's cookin' good lookin'?">
+        <img class="searchicon" src="assets/search_icon.png">
+        <input class="searchbar" id="searchbar" type="text" placeholder="What's cookin' good lookin'?">
+        <div class="enter">
+            <button type="submit" id="find" value="Find Food">Find Food</button>
+        </div>
     </div>
 
     <div class="filters">
@@ -48,13 +52,13 @@
         </div>
     </div>
 
-    <div class="content">
+    <div class="content" id="content">
         <div class="fooditem"> 
             <div class="foodtitle">
-                CHICKEN ALFREDO
+                <a href="community.html">CHICKEN ALFREDO</a>
             </div>
             <div class="foodpic">
-                <img src="pasta.jpg">
+                <img id="food" src="assets/pasta.jpg">
             </div>
             <div class="foodfooter">
                 <div class="footerinfo" id="foodcuisine">
@@ -70,100 +74,99 @@
         </div>
         <div class="fooditem"> 
             <div class="foodtitle">
-                CHICKEN ALFREDO
+                <a href="community.html">EGG BENEDICT</a>
             </div>
             <div class="foodpic">
-                <img src="pasta.jpg">
+                <img id="food" src="assets/egg_benedict.jpg">
             </div>
             <div class="foodfooter">
                 <div class="footerinfo" id="foodcuisine">
-                    ITALIAN
+                    AMERICAN
                 </div>
                 <div class="footerinfo" id="fooddifficulty">
-                    INTERMEDIATE
+                    BEGINNER
                 </div>
                 <div class="footerinfo" id="fooddifficulty">
-                    45 MIN
+                    20 MIN
                 </div>
             </div>
         </div>
         <div class="fooditem"> 
             <div class="foodtitle">
-                CHICKEN ALFREDO
+                <a href="community.html">BUN BO HUE</a>
             </div>
             <div class="foodpic">
-                <img src="pasta.jpg">
+                <img id="food" src="assets/bunbohue.jpg">
             </div>
             <div class="foodfooter">
                 <div class="footerinfo" id="foodcuisine">
-                    ITALIAN
+                    VIETNAMESE
                 </div>
                 <div class="footerinfo" id="fooddifficulty">
-                    INTERMEDIATE
+                    ADVANCED
                 </div>
                 <div class="footerinfo" id="fooddifficulty">
-                    45 MIN
+                    3 HOURS
                 </div>
             </div>
         </div>
         <div class="fooditem"> 
             <div class="foodtitle">
-                CHICKEN ALFREDO
+                <a href="community.html">CHICKEN & WAFFLES</a>
             </div>
             <div class="foodpic">
-                <img src="pasta.jpg">
+                <img id="food" src="assets/waffles.jpg">
             </div>
             <div class="foodfooter">
                 <div class="footerinfo" id="foodcuisine">
-                    ITALIAN
+                    AMERICAN
                 </div>
                 <div class="footerinfo" id="fooddifficulty">
                     INTERMEDIATE
                 </div>
                 <div class="footerinfo" id="fooddifficulty">
-                    45 MIN
+                    40 MINUTES
                 </div>
-            </div>>
+            </div>
         </div>
         <div class="fooditem"> 
            <div class="foodtitle">
-               CHICKEN ALFREDO
+                <a href="community.html">SESAME NOODLES</a>
             </div>
             <div class="foodpic">
-                <img src="pasta.jpg">
+                <img id="food" src="assets/sesame_noodle.jpg">
             </div>
             <div class="foodfooter">
                 <div class="footerinfo" id="foodcuisine">
-                    ITALIAN
+                    CHINESE
                 </div>
                 <div class="footerinfo" id="fooddifficulty">
-                    INTERMEDIATE
+                    BEGINNER
                 </div>
                 <div class="footerinfo" id="fooddifficulty">
-                    45 MIN
+                    20 MIN
                 </div>
             </div>
         </div>
         <div class="fooditem"> 
             <div class="foodtitle">
-                CHICKEN ALFREDO
+                <a href="community.html">CHICKEN & AVOCADO SALAD</a>
             </div>
             <div class="foodpic">
-                <img src="pasta.jpg">
+                <img id="food" src="assets/salad.jpg">
             </div>
             <div class="foodfooter">
                 <div class="footerinfo" id="foodcuisine">
-                    ITALIAN
+                    AMERICAN
                 </div>
                 <div class="footerinfo" id="fooddifficulty">
-                    INTERMEDIATE
+                    BEGINNER
                 </div>
                 <div class="footerinfo" id="fooddifficulty">
-                    45 MIN
+                    30 MIN
                 </div>
             </div>
         </div>
-
     </div>
 </body>
 </html>
