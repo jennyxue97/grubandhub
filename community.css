@@ -2,6 +2,12 @@
     --text-color: #b97f6d;
     --background-color: #ededee;
     --transition-color: #dab0a2;
+
+    --share-button-color: red;
+    --question-button-color: darkred;
+    --tips-button-color: #680000;
+
+    --submit-button-color: forestgreen;
 }
 body {
     background-color: var(--background-color);
@@ -182,4 +188,213 @@ img {
     font-size: 14px;
     padding: 20px 10px 5px 5px;
     text-align: right;
+}
+
+
+.new-post-button {
+    grid-column: 3;
+
+    width: 50%;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--text-color);
+    padding: 10px 0 10px 0;
+    background-color: white;
+    border: 1px solid;
+
+    justify-self: end;
+}
+
+/* https://www.w3schools.com/howto/howto_css_overlay.asp */
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+
+    align-items: center;
+    justify-content: center;
+}
+
+.new-post {
+    display: flex;
+    flex-direction: column;
+
+    width: 400px;
+    height: auto;
+
+    border: 2px solid var(--text-color);
+    padding: 10px;
+
+    background-color: var(--background-color);
+}
+
+.new-post * button:hover, .new-post * span:hover {
+    cursor: pointer;
+}
+
+.new-post-title-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+.new-post-title {
+    color: var(--text-color);
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.new-post-cancel-button {
+    width: 35px;
+    /*height: 30px;*/
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--text-color);
+    padding: 10px 0 10px 0;
+    background-color: white;
+    border: 1px solid;
+}
+.new-post-cancel-button:active {
+    color: white;
+    background-color: var(--text-color);
+}
+
+
+#image-path {
+    visibility: hidden;
+    position: absolute;
+}
+.new-post-upload-button {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--text-color);
+    padding: 10px 0 10px 0;
+    background-color: white;
+    border: 1px solid;
+
+    margin-bottom: 10px;
+}
+.new-post-upload-button:hover {
+    cursor: pointer;
+}
+.new-post-upload-button:active {
+    color: white;
+    background-color: var(--text-color);
+}
+
+.user-image {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+.visible {
+    visibility: visible;
+    height: auto;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#new-post-form {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-row-gap: 10px;
+
+    color: var(--text-color);
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 20px;
+}
+
+#new-post-form > textarea {
+    resize: none;
+}
+
+.new-post-form-radio-holder > label {
+    margin: 0 10px 0 10px;
+}
+
+.new-post-form-radio-holder > label:first-child {
+    margin-left: 0;
+}
+
+/* hides original radio button (so I can use images instead) */
+.new-post-form-radio-holder > label > input {
+    visibility: hidden;
+    position: absolute;
+}
+
+
+.new-post-form-radio-holder > label > span {
+    cursor:pointer;
+
+    width: 200px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    padding: 5px 20px 5px 20px;
+    background-color: white;
+    border: 1px solid;
+}
+.new-post-form-radio-holder > label > input:checked + span {
+    cursor: pointer;
+}
+
+.post-category-share-button.post-category-share-button {
+    color: var(--share-button-color);
+}
+.new-post-form-radio-holder > label > input:checked + .post-category-share-button,
+.new-post-form-radio-holder > label > input:active + .post-category-share-button{
+    background-color: var(--share-button-color);
+    color: white;
+}
+
+.post-category-question-button {
+    color: var(--question-button-color);
+}
+.new-post-form-radio-holder > label > input:checked + .post-category-question-button,
+.new-post-form-radio-holder > label > input:active + .post-category-question-button {
+    background-color: var(--question-button-color);
+    color: white;
+}
+
+.post-category-tips-button {
+    color: var(--tips-button-color)
+}
+.new-post-form-radio-holder > label > input:checked + .post-category-tips-button,
+.new-post-form-radio-holder > label > input:active + .post-category-tips-button {
+    background-color: var(--tips-button-color);
+    color: white;
+}
+
+.new-post-submit-button {
+    width: 30%;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--submit-button-color);
+    padding: 10px 0px 10px 0px;
+    background-color: white;
+    border: 1px solid;
+
+    margin-top: 50px;
+    margin-left: auto;
+}
+.new-post-submit-button:active {
+    background-color: var(--submit-button-color);
+    color: white;
 }
