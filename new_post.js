@@ -48,7 +48,7 @@ function url() {
 https://stackoverflow.com/questions/588263/how-can-i-get-all-a-forms-values-that-would-be-submitted-without-submitting
  */
 function getForm() {
-    var user_image = Util.one("#user-image").getAttribute("src");
+    var user_image = Util.one(".user-image").getAttribute("src");
     var out = {image: user_image};
 
     var fields = [Util.one("#input-title"), Util.one("#input-text")];

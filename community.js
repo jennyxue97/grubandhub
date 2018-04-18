@@ -9,6 +9,20 @@ window.onload = function () {
     document.getElementById("find").onclick = function onSubmit(form) {
         submitForm();
     }
+
+    document.getElementById("new-post-submit-button").onclick = function onSubmitPost(){
+        addNewPost();
+    }
+}
+
+function addNewPost(){
+    var data = getForm();
+    var currentContent = document.getElementById("content").innerHTML;
+    var newData = "<div class='post'> <div class='postpic'> <img src=" + data.image + "> </div>" +
+    "<div class='postinfo'> <div class='postheader'> <div class='posttitle'>" + data.title.toUpperCase() +
+    "</div> <div class='postfooter'>" + data.category + "</div> </div> <div class='postdescription'><p>" + 
+    data.text + "</p> </div> </div> </div>";
+    document.getElementById("content").innerHTML = newData + currentContent;
 }
 
 function submitForm(){
