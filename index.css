@@ -78,20 +78,34 @@ header {
 
 .search{
     padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 90% 10%;
 }
 .searchbar{
-    width: 97%;
+    width: 95%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-size: 14px;
     color: var(--text-color);
     padding: 10px 0px 10px 35px;
+    margin-right: 10px;
+}
+
+#find{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--text-color);
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    border: 1px solid;
+    width: 100%;
 }
 
 .searchicon{
     position: absolute;
     left: 60px;
-    top: 85px;
+    top: 88px;
     width: 1%;
     height: auto;
 }

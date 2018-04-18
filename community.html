@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="community.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway" rel="stylesheet">
-    <link rel="import" href="templates.html" id="templates">
-
+    <!-- <link rel="import" href="templates.html" id="templates"> -->
+    <script src="community.js"></script>
     <script src="util.js"></script>
     <script src="new_post.js"></script>
 
@@ -30,8 +30,11 @@
     </div>
 
     <div class="search">
-        <img class="searchicon" src="search_icon.png">
-        <input class="searchbar" type="text" placeholder="What's cookin' good lookin'?">
+        <img class="searchicon" src="assets/search_icon.png">
+        <input class="searchbar" id="searchbar" type="text" placeholder="What's cookin' good lookin'?">
+        <div class="enter">
+                <button type="submit" id="find" value="Find Food">Find Food</button>
+            </div>
     </div>
 
     <div class="filters">

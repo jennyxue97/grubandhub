@@ -79,9 +79,11 @@ button:hover{
 
 .search{
     padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 90% 10%;
 }
 .searchbar{
-    width: 97%;
+    width: 95%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-size: 14px;
@@ -95,6 +97,16 @@ button:hover{
     top: 85px;
     width: 1%;
     height: auto;
+}
+#find{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--text-color);
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    border: 1px solid;
+    width: 100%;
 }
 
 .filters{
@@ -178,6 +190,10 @@ img {
     padding: 20px 10px 0px 10px;
 }
 
+.posttitle:hover{
+    color: var(--transition-color);
+}
+
 .postdescription{
     color: var(--text-color);
     font-family: 'Raleway', sans-serif;
@@ -256,7 +272,7 @@ img {
     color: var(--text-color);
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 30px;
 }
 
