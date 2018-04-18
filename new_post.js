@@ -2,13 +2,29 @@ var dom = {};
 
 Util.events(document, {
     "DOMContentLoaded": function () {
+        dom.new_post_button = Util.one(".new-post-button");
         dom.user_image_selector = Util.one("#image-path");
         dom.submit_button = Util.one(".new-post-submit-button");
+        dom.cancel_button = Util.one(".new-post-cancel-button");
 
+        dom.new_post_button.addEventListener("click", overlay_on);
         dom.user_image_selector.setAttribute("onchange", "url()");
         dom.submit_button.addEventListener("click", getForm);
+        dom.cancel_button.addEventListener("click", overlay_off);
+
     },
 });
+
+/*
+https://www.w3schools.com/howto/howto_css_overlay.asp
+ */
+function overlay_on() {
+    document.getElementById("overlay").style.display = "flex";
+}
+
+function overlay_off() {
+    document.getElementById("overlay").style.display = "none";
+}
 
 /*
 https://stackoverflow.com/questions/1628826/how-to-add-an-onchange-event-to-a-select-box-via-javascript
@@ -57,6 +73,8 @@ function getForm() {
     if (count === buttons.length) {
         throw new NoPostCategoryError;
     }
+
+    overlay_off();
     return out;
 }
 
