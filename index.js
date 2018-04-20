@@ -123,6 +123,7 @@ function applyFilters(){
     document.getElementById('bunBoHue').remove();
     document.getElementById('chicken').remove();
     document.getElementById('chickenAvocado').remove();
+    displayShrimpFriedRice();
     var tags = document.getElementById('tags');
     var tag = document.createElement('button');
     tag.id = 'tag'
@@ -133,6 +134,10 @@ function applyFilters(){
 }
 
 function applyTimeLimit(){
+    // document.getElementById('alfredo').remove();
+    // document.getElementById('bunBoHue').remove();
+    // document.getElementById('chicken').remove();
+    displayShrimpFriedRice();
     var tags = document.getElementById('tags');
     var tag = document.createElement('button');
     tag.id = 'tag'
