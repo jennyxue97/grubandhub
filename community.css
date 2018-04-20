@@ -136,6 +136,26 @@ button:hover{
     grid-column: 1;
 }
 
+#categories{
+    display:grid;
+    z-index:100;
+    position:absolute;
+    width: 9.4%;
+}
+
+.categoryOption{
+    grid-column: 1;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: gray;
+    padding: 0;
+    background-color: white;
+    border: 1px solid;
+    margin-top: 1px;
+}
+
 .dropdownoptions{
     width: 33;
     padding: 10px 0px 10px 35px;

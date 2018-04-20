@@ -15,6 +15,8 @@ window.onload = function () {
     }
 }
 
+var dropped = false;
+
 function addNewPost(){
     var data = getForm();
     var currentContent = document.getElementById("content").innerHTML;
@@ -44,7 +46,31 @@ function submitForm(){
 }
 
 function createDropdown(){
-    var dropdown = document.getElementById("categories");
+    if (!dropped){
+        dropped = true;
+        var dropdown = document.getElementById("categories");
+        var share = document.createElement('button');
+        share.id = 'share';
+        share.innerHTML = 'Share';
+        share.className = 'categoryOption';
+        var help = document.createElement('button');
+        help.id = 'help';
+        help.innerHTML = 'Help';
+        help.className = 'categoryOption';
+        var tips = document.createElement('button');
+        tips.id = 'tips'
+        tips.innerHTML = 'Tips';
+        tips.className = 'categoryOption';
+        dropdown.appendChild(share);
+        dropdown.appendChild(help);
+        dropdown.appendChild(tips);
+    }else{
+        var categories = document.getElementById("categories");
+        while (categories.firstChild){
+            categories.removeChild(categories.firstChild);
+        }
+        dropped=false;
+    }
 
 }
 

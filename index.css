@@ -160,13 +160,12 @@ header {
     font-style: normal;
     font-size: 14px;
     color: var(--text-color);
-    margin: 5px;
-    margin-top:15px;
+    margin: 1px;
+    margin-top:14%;
 }
 
 #timeDropDown{
     width: 16%;
-    height: 8%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-size: 14px;
