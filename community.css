@@ -115,12 +115,12 @@ button:hover{
     padding: 10px 0px 10px 0px;
 }
 
-.dropdown{
+#dropdown{
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
 }
 
-.dropdowntoggle{
+.dropdowntoggle {
     width: 30%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
@@ -215,7 +215,6 @@ img {
 
 .new-post-button {
     grid-column: 3;
-
     width: 50%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;

@@ -43,6 +43,11 @@ function submitForm(){
     // }
 }
 
+function createDropdown(){
+    var dropdown = document.getElementById("categories");
+
+}
+
 function displayShrimpFriedRice(){
     document.getElementById("content").innerHTML = "<div class='fooditem'> <div class='foodtitle'> <a href='community.html'>SHRIMP FRIED RICE</a> </div> " + 
     "<div class='foodpic'> <img id='food' src='assets/shrimp_fried_rice.jpg'> </div> " + 

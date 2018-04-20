@@ -119,6 +119,7 @@ header {
 .dropdown{
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
+    position:relative;
 }
 
 .dropdowntoggle{
@@ -133,9 +134,90 @@ header {
     border: 1px solid;
 }
 
+#cuisineDropDown{
+    width: 20%;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--text-color);
+    padding: 10px;
+    background-color: white;
+    border: 1px solid;
+    z-index: 100;
+    position:absolute;
+}
+
+#cuisineOptions{
+    width:100%;
+}
+
+#controls{
+    float:right;
+}
+
+.controlButton{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 5px;
+    margin-top:15px;
+}
+
+#timeDropDown{
+    width: 16%;
+    height: 8%;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--text-color);
+    padding: 10px;
+    background-color: white;
+    border: 1px solid;
+    z-index: 100;
+    position:absolute;
+    margin-left: 10.3%;
+}
+
 .cuisine{
     grid-column: 1;
 }
+
+#timeLimit{
+    text-align: center;
+}
+
+#tags{
+    width: 30%;
+}
+
+#tag{
+    width: 20%;
+    height: 50%;
+    margin:0;
+    margin-right:10px;
+    padding:0;
+    float:left;
+    background-color: white;
+}
+
+#tagLabel{
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    color: var(--text-color);
+    width: 30%;
+    margin:0;
+    padding:0;
+    float:left;
+    position:relative;
+}
+
+#close{
+    position:relative;
+    float:right;
+}
+
 
 .dropdownoptions{
     width: 33;

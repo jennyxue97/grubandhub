@@ -35,25 +35,20 @@
 
     <div class="filters">
         <div class="cuisine">
-            <div class="dropdown">
-                <button class="dropdowntoggle" id="cuisine">Cuisine</button>
-                <!-- <div class="cuisinemenu">
-                    <button>American<i class="dropdownoption"></i></button>
-                    <button>Chinese<i class="dropdownoption"></i></button>
-                    <button>French<i class="dropdownoption"></i></button>
-                    <button>Italian<i class="dropdownoption"></i></button>
-                    <button>Japanese<i class="dropdownoption"></i></button>
-                    <button>Mexican<i class="dropdownoption"></i></button>
-                </div> -->
-                <button class="dropdowntoggle" id="time">Time</button>
+            <div id="dropdown">
+                <button class="dropdowntoggle" id="cuisine" onclick="showCuisineDropDown()">Cuisine</button>
+                <button class="dropdowntoggle" id="time" onclick="showTimeLimit()">Time</button>
                 <button class="dropdowntoggle" id="difficulty">Difficulty</button>
             </div>
 
         </div>
     </div>
 
+    <div id="tags">
+    </div>
+
     <div class="content" id="content">
-        <div class="fooditem"> 
+        <div class="fooditem" id="alfredo">
             <div class="foodtitle">
                 <a href="community.html">CHICKEN ALFREDO</a>
             </div>
@@ -72,7 +67,7 @@
                 </div>
             </div>
         </div>
-        <div class="fooditem"> 
+        <div class="fooditem" id="benedict">
             <div class="foodtitle">
                 <a href="community.html">EGG BENEDICT</a>
             </div>
@@ -91,7 +86,7 @@
                 </div>
             </div>
         </div>
-        <div class="fooditem"> 
+        <div class="fooditem" id="bunBoHue">
             <div class="foodtitle">
                 <a href="community.html">BUN BO HUE</a>
             </div>
@@ -110,7 +105,7 @@
                 </div>
             </div>
         </div>
-        <div class="fooditem"> 
+        <div class="fooditem" id="chicken">
             <div class="foodtitle">
                 <a href="community.html">CHICKEN & WAFFLES</a>
             </div>
@@ -129,7 +124,7 @@
                 </div>
             </div>
         </div>
-        <div class="fooditem"> 
+        <div class="fooditem" id="sesame">
            <div class="foodtitle">
                 <a href="community.html">SESAME NOODLES</a>
             </div>
@@ -148,7 +143,7 @@
                 </div>
             </div>
         </div>
-        <div class="fooditem"> 
+        <div class="fooditem" id="chickenAvocado">
             <div class="foodtitle">
                 <a href="community.html">CHICKEN & AVOCADO SALAD</a>
             </div>
