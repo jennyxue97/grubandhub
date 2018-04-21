@@ -270,6 +270,11 @@ p {
     background-color: var(--background-color);
 }
 
+.continue-button:hover {
+    background-color: var(--text-color);
+    color: white;
+}
+
 .chat-question{
     font-family: 'Raleway', sans-serif;
     font-style: normal;
