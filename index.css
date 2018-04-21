@@ -134,6 +134,13 @@ header {
     border: 1px solid;
 }
 
+.subtitle{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--text-color);
+    padding: 20px 0px 20px 0px;
+}
 #cuisineDropDown{
     width: 20%;
     font-family: 'Raleway', sans-serif;
