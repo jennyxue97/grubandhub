@@ -109,15 +109,16 @@ p {
     background: white;
     border: 1px solid;
     border-color: var(--text-color);
+    display: grid;
+    grid-template-rows: 50% 50%;
 }
 
 .course-name {
     margin: 0px;
-    padding: 5px 0px 5px 0px;
+    padding: 8px 0px 0px 0px;
 }
 
 .progress {
-    padding: 10px 0px 5px 0px;
     text-align: center;
 }
 
@@ -125,8 +126,8 @@ p {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-size: 12px;
-    height: 40px;
-    width: 70px;
+    height: 45px;
+    width: 90px;
     margin-left: 20px;
     margin-right: 20px;
     border: 1px solid;
