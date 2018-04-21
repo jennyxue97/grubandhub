@@ -182,5 +182,5 @@ function displayShrimpFriedRice(){
     "<div class='foodfooter'> <div class='footerinfo' id='foodcuisine'> CHINESE </div>" + 
     "<div class='footerinfo' id='fooddifficulty'> INTERMEDIATE </div> <div class='footerinfo' id='fooddifficulty'>" +
     "30 MIN </div> </div> </div>";
-    document.getElementById("subtitle").innerHTML = "";
+    document.getElementById("subtitle").innerHTML = "Results";
 }
