@@ -240,10 +240,14 @@ p {
     grid-template-rows: 90% 10%;
     border: 1px solid;
     border-color: black;
+    overflow: hidden;
 }
 
 .chat-text {
     background: white;
+    overflow-y: auto;
+    height: 280px;
+    overflow-x: hidden;
 }
 
 .chat-input {
@@ -264,4 +268,27 @@ p {
     border: 1px solid;
     border-color: var(--text-color);
     background-color: var(--background-color);
+}
+
+.chat-question{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;   
+    text-align: right;
+    width: 80%;
+    border: 1px solid var(--text-color);
+    margin: 10px 0px 0px 25px;
+    padding: 5px;
+}
+
+.chat-answer{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 14px;   
+    background-color: var(--text-color);
+    color: white;
+    width: 80%;
+    border: 1px solid var(--text-color);
+    margin: 10px 0px 0px 2px;
+    padding: 5px;
 }
