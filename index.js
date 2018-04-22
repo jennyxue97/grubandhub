@@ -12,7 +12,10 @@ window.onload = function () {
 }
 
 const cuisine = ['American', 'Chinese', 'French', 'German', 'Italian', 'Mexican', 'Vietnamese'];
+const difficulties = ['Beginner','Intermediate','Advanced'];
 var showCuisines = false;
+var showTime = false;
+var showDifficultyDropdown = false;
 
 function submitForm(){
     var isValid = true;
@@ -64,6 +67,9 @@ function showCuisineDropDown(){
         }
         cuisineDropDown.appendChild(controls);
         dropDown.appendChild(cuisineDropDown);
+    }else{
+        closeCuisineDropDown();
+        showCuisines = false;
     }
 }
 
@@ -88,8 +94,10 @@ function createCancelAndSubmitButton(dropdown){
     cancel.innerHTML = 'cancel';
     if (dropdown == 1){
         cancel.onclick = closeCuisineDropDown;
-    }else{
+    }else if(dropdown ==2){
         cancel.onclick = closeTimeLimit;
+    }else{
+        cancel.onclick = closeDifficultyDropdown;
     }
     buttons.push(cancel);
 
@@ -118,11 +126,22 @@ function closeTimeLimit(){
 }
 
 function applyFilters(){
-    document.getElementById('alfredo').remove();
-    document.getElementById('benedict').remove();
-    document.getElementById('bunBoHue').remove();
-    document.getElementById('chicken').remove();
-    document.getElementById('chickenAvocado').remove();
+    if (document.getElementById('alfredo') != null){
+        document.getElementById('alfredo').remove();
+    }
+    if (document.getElementById('benedict') != null){
+        document.getElementById('benedict').remove();
+    }
+    if (document.getElementById('bunBoHue') != null){
+        document.getElementById('bunBoHue').remove();
+    }
+    if (document.getElementById('chicken') != null){
+        document.getElementById('chicken').remove();
+    }
+    if (document.getElementById('chickenAvocado') != null){
+        document.getElementById('chickenAvocado').remove();
+    }
+
     displayShrimpFriedRice();
     var tags = document.getElementById('tags');
     var tag = document.createElement('button');
@@ -148,31 +167,94 @@ function applyTimeLimit(){
 }
 
 function showTimeLimit(){
-    var dropDown = document.getElementById('dropdown');
-    var timeDropDown = document.createElement('div');
-    timeDropDown.id = 'timeDropDown';
+    if (!showTime){
+        showTime = true;
+        var dropDown = document.getElementById('dropdown');
+        var timeDropDown = document.createElement('div');
+        timeDropDown.id = 'timeDropDown';
 
-    var inputLine = document.createElement('div');
-    inputLine.id = 'inputLine';
-    var label = document.createElement('label');
-    label.innerHTML = 'Less than ';
-    var input = document.createElement('input');
-    input.id = 'timeLimit';
-    var otherLabel = document.createElement('label');
-    otherLabel.innerHTML = ' minutes';
-    inputLine.appendChild(label);
-    inputLine.appendChild(input);
-    inputLine.appendChild(otherLabel);
-    timeDropDown.appendChild(inputLine);
+        var inputLine = document.createElement('div');
+        inputLine.id = 'inputLine';
+        var label = document.createElement('label');
+        label.innerHTML = 'Less than ';
+        var input = document.createElement('input');
+        input.id = 'timeLimit';
+        var otherLabel = document.createElement('label');
+        otherLabel.innerHTML = ' minutes';
+        inputLine.appendChild(label);
+        inputLine.appendChild(input);
+        inputLine.appendChild(otherLabel);
+        timeDropDown.appendChild(inputLine);
 
-    var cancelSubmit = createCancelAndSubmitButton(2);
-    var controls = document.createElement('div');
-    controls.id='controls';
-    for (var i=0;i<cancelSubmit.length;i++){
-        controls.appendChild(cancelSubmit[i]);
+        var cancelSubmit = createCancelAndSubmitButton(2);
+        var controls = document.createElement('div');
+        controls.id='controls';
+        for (var i=0;i<cancelSubmit.length;i++){
+            controls.appendChild(cancelSubmit[i]);
+        }
+        timeDropDown.appendChild(controls);
+        dropDown.append(timeDropDown);
+    }else{
+        showTime = false;
+        closeTimeLimit();
     }
-    timeDropDown.appendChild(controls);
-    dropDown.append(timeDropDown);
+}
+
+function showDifficulty(){
+    if (!showDifficultyDropdown){
+        showDifficultyDropdown = true;
+        var dropDown = document.getElementById('dropdown');
+        var difficultyDropdown = document.createElement('div');
+        difficultyDropdown.id = 'difficultyDropdown';
+
+        var difficultyOptions = document.createElement('table');
+        difficultyOptions.id = 'difficultyOptions';
+
+        var buttons = createDifficultyOptions();
+
+        var row;
+        for (var i=0; i<buttons.length;i++){
+            if (i%3==0){
+                row = difficultyOptions.insertRow(i/3);
+            }
+            var cell = row.insertCell(i%3);
+            cell.id = difficulties[i];
+            cell.className = 'difficultyLabel';
+            cell.appendChild(buttons[i]);
+        }
+        difficultyDropdown.appendChild(difficultyOptions);
+
+        var cancelSubmit = createCancelAndSubmitButton(3);
+        var controls = document.createElement('div');
+        controls.id='controls';
+        for (var i=0;i<cancelSubmit.length;i++){
+            controls.appendChild(cancelSubmit[i]);
+        }
+        difficultyDropdown.appendChild(controls);
+        dropDown.appendChild(difficultyDropdown);
+    }else{
+        showDifficultyDropdown = false;
+        closeDifficultyDropdown();
+    }
+}
+
+function createDifficultyOptions(){
+    var buttons = []
+    for (var i=0; i<difficulties.length;i++){
+        var label = document.createElement('label');
+        var checkBox = document.createElement('input');
+        checkBox.type = 'checkbox';
+        label.appendChild(checkBox);
+        label.appendChild(document.createTextNode(difficulties[i]));
+        buttons.push(label);
+    }
+    return buttons;
+}
+
+function closeDifficultyDropdown(){
+    if (document.getElementById('difficultyDropdown') != null){
+        document.getElementById('difficultyDropdown').remove();
+    }
 }
 
 function displayShrimpFriedRice(){

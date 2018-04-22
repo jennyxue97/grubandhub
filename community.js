@@ -15,7 +15,8 @@ window.onload = function () {
     }
 }
 
-var dropped = false;
+const categories = ['Share','Help','Tips'];
+var showCategoryDrop = false;
 
 function addNewPost(){
     var data = getForm();
@@ -46,32 +47,78 @@ function submitForm(){
 }
 
 function createDropdown(){
-    if (!dropped){
-        dropped = true;
-        var dropdown = document.getElementById("categories");
-        var share = document.createElement('button');
-        share.id = 'share';
-        share.innerHTML = 'Share';
-        share.className = 'categoryOption';
-        var help = document.createElement('button');
-        help.id = 'help';
-        help.innerHTML = 'Help';
-        help.className = 'categoryOption';
-        var tips = document.createElement('button');
-        tips.id = 'tips'
-        tips.innerHTML = 'Tips';
-        tips.className = 'categoryOption';
-        dropdown.appendChild(share);
-        dropdown.appendChild(help);
-        dropdown.appendChild(tips);
-    }else{
-        var categories = document.getElementById("categories");
-        while (categories.firstChild){
-            categories.removeChild(categories.firstChild);
+    if (!showCategoryDrop){
+        showCategoryDrop = true;
+        var dropDown = document.getElementById('categories');
+        var categoryDropdown = document.createElement('div');
+        categoryDropdown.id = 'categoryDropdown';
+
+        var categoryOptions = document.createElement('table');
+        categoryOptions.id = 'categoryOptions';
+
+        var buttons = createCategoryOptions();
+
+        var row;
+        for (var i=0; i<buttons.length;i++){
+            if (i%3==0){
+                row = categoryOptions.insertRow(i/3);
+            }
+            var cell = row.insertCell(i%3);
+            cell.id = categories[i];
+            cell.className = 'categorylabel';
+            cell.appendChild(buttons[i]);
         }
-        dropped=false;
+        categoryDropdown.appendChild(categoryOptions)
+
+        var cancelSubmit = createCancelAndSubmitButton();
+        var controls = document.createElement('div');
+        controls.id='controls';
+        for (var i=0;i<cancelSubmit.length;i++){
+            controls.appendChild(cancelSubmit[i]);
+        }
+        categoryDropdown.appendChild(controls);
+        dropDown.appendChild(categoryDropdown);
+    }else{
+        showCategoryDrop = false;
+        closeCategoryOption();
     }
 
+}
+
+function createCategoryOptions(){
+    var buttons = []
+    for (var i=0; i<categories.length;i++){
+        var label = document.createElement('label');
+        var checkBox = document.createElement('input');
+        checkBox.type = 'checkbox';
+        label.appendChild(checkBox);
+        label.appendChild(document.createTextNode(categories[i]));
+        buttons.push(label);
+    }
+    return buttons;
+}
+
+function closeCategoryOption(){
+    document.getElementById("categoryDropdown").remove();
+}
+
+function createCancelAndSubmitButton(){
+    var buttons = []
+    var cancel = document.createElement('button');
+    cancel.className = 'controlButton';
+    cancel.type = 'submit';
+    cancel.innerHTML = 'cancel';
+    cancel.onclick = closeCategoryOption;
+    buttons.push(cancel);
+
+    var confirm = document.createElement('button');
+    confirm.className = 'controlButton';
+    confirm.type = 'submit';
+    confirm.innerHTML = 'confirm';
+
+    confirm.onclick =
+    buttons.push(confirm);
+    return buttons;
 }
 
 function displayShrimpFriedRice(){
