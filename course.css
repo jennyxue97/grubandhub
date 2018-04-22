@@ -314,3 +314,8 @@ p {
     margin: 10px 0px 0px 2px;
     padding: 5px;
 }
+
+#video {
+    height: 85%;
+    width: 90%;
+}
