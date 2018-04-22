@@ -30,6 +30,7 @@ header {
 
 button:hover{
     color: var(--transition-color);
+    cursor: pointer;
 }
 .head {
     width: 100%;
@@ -225,6 +226,7 @@ img {
 
 .posttitle:hover{
     color: var(--transition-color);
+    cursor: pointer;
 }
 
 .postdescription{
