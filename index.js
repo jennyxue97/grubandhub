@@ -39,6 +39,14 @@ function submitForm(){
 function showCuisineDropDown(){
     if (!showCuisines){
         showCuisines = true;
+
+        if (showTime){
+            closeTimeLimit();
+        }
+        if (showDifficultyDropdown){
+            closeDifficultyDropdown();
+        }
+
         var dropDown = document.getElementById('dropdown');
         var cuisineDropDown = document.createElement('div');
         cuisineDropDown.id = 'cuisineDropDown';
@@ -172,6 +180,12 @@ function applyTimeLimit(){
 function showTimeLimit(){
     if (!showTime){
         showTime = true;
+        if (showCuisines){
+            closeCuisineDropDown();
+        }
+        if (showDifficultyDropdown){
+            closeDifficultyDropdown();
+        }
         var dropDown = document.getElementById('dropdown');
         var timeDropDown = document.createElement('div');
         timeDropDown.id = 'timeDropDown';
@@ -205,6 +219,12 @@ function showTimeLimit(){
 function showDifficulty(){
     if (!showDifficultyDropdown){
         showDifficultyDropdown = true;
+        if (showTime){
+            closeTimeLimit();
+        }
+        if (showCuisines){
+            closeCuisineDropDown();
+        }
         var dropDown = document.getElementById('dropdown');
         var difficultyDropdown = document.createElement('div');
         difficultyDropdown.id = 'difficultyDropdown';
