@@ -136,6 +136,7 @@ button:hover{
     grid-column: 1;
 }
 
+
 #categories{
 
 }
@@ -152,6 +153,7 @@ button:hover{
     border: 1px solid;
     z-index: 100;
     position:absolute;
+
 }
 
 #controls{
