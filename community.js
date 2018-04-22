@@ -99,6 +99,7 @@ function createCategoryOptions(){
 }
 
 function closeCategoryOption(){
+    showCategoryDrop = false;
     document.getElementById("categoryDropdown").remove();
 }
 
@@ -116,7 +117,7 @@ function createCancelAndSubmitButton(){
     confirm.type = 'submit';
     confirm.innerHTML = 'confirm';
 
-    confirm.onclick =
+    confirm.onclick = closeCategoryOption;
     buttons.push(confirm);
     return buttons;
 }

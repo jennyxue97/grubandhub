@@ -70,7 +70,6 @@ function showCuisineDropDown(){
         dropDown.appendChild(cuisineDropDown);
     }else{
         closeCuisineDropDown();
-        showCuisines = false;
     }
 }
 
@@ -125,6 +124,7 @@ function closeCuisineDropDown(){
 }
 
 function closeTimeLimit(){
+    showTime = false;
     document.getElementById('timeDropDown').remove();
 }
 
@@ -198,7 +198,6 @@ function showTimeLimit(){
         timeDropDown.appendChild(controls);
         dropDown.append(timeDropDown);
     }else{
-        showTime = false;
         closeTimeLimit();
     }
 }
@@ -236,7 +235,6 @@ function showDifficulty(){
         difficultyDropdown.appendChild(controls);
         dropDown.appendChild(difficultyDropdown);
     }else{
-        showDifficultyDropdown = false;
         closeDifficultyDropdown();
     }
 }
@@ -256,6 +254,7 @@ function createDifficultyOptions(){
 
 function closeDifficultyDropdown(){
     if (document.getElementById('difficultyDropdown') != null){
+        showDifficultyDropdown = false;
         document.getElementById('difficultyDropdown').remove();
     }
 }
