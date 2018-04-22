@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="course.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway" rel="stylesheet">
+    <script src="course.js"></script>
     <html lang="en">
 </head>
 <body>
@@ -28,15 +29,15 @@
         <div class="course-header">
             <h1 class="course-name">Shrimp Fried Rice</h1>
             <div class="progress">
-                <a href="courseChapter1.html"><button class="progress-section" id="current-chapter">Info</button></a>
+                <a href="courseChapter1.html"><button class="progress-section" id="current-chapter">Chapter 1: Introduction</button></a>
                 <p><b>>></b></p>
-                <a href="courseChapter2.html"><button class="progress-section" id="future-chapter">Video</button></a>
+                <a href="courseChapter2.html"><button class="progress-section" id="future-chapter">Chapter 2: Veggie Prep</button></a>
                 <p><b>>></b></p>
-                <a href="courseChapter3.html"><button class="progress-section" id="future-chapter">Video</button></a>
+                <a href="courseChapter3.html"><button class="progress-section" id="future-chapter">Chapter 3: Cooking Egg</button></a>
                 <p><b>>></b></p>
-                <a href="courseChapter4.html"><button class="progress-section" id="future-chapter">Video</button></a>
+                <a href="courseChapter4.html"><button class="progress-section" id="future-chapter">Chapter 4: Frying Rice</button></a>
                 <p><b>>></b></p>
-                <a href="courseChapter5.html"><button class="progress-section" id="future-chapter">Summary</button></a>
+                <a href="courseChapter5.html"><button class="progress-section" id="future-chapter">Chapter 5: Summary</button></a>
             </div>
         </div>
     
@@ -61,8 +62,8 @@
             <div class="center-content">
                 <h3 class="section-header">Chapter 1: Shrimp Fried Rice Introduction</h3>
                 <div class="section-description">
-                        <p>Learn how to julienne vegetables, cook eggs, and fry rice as you make this Chinese cuisine classic!</p>
-                    </div>
+                    <p>Learn how to julienne vegetables, cook eggs, and fry rice as you make this Chinese cuisine classic!</p>
+                </div>
                 <img class="section-picture" src="assets/shrimp_fried_rice.jpg">
             </div>
             <div class="right-content">
@@ -70,10 +71,12 @@
                     <h3 class="help-header">Live Help</h3>
                 </div>
                 <div class="chat">
-                    <div class="chat-text">
-
+                    <div class="chat-text" id="chat-text">
+                        <div class="chat-answer">
+                            <p style="color:white">Hi there, I'm Andrew! Let me know if you have any questions about the course!</p>
+                        </div>
                     </div>
-                    <input class="chat-input" type="text" placeholder="Ask a question...">
+                    <input id="chat-input" class="chat-input" type="text" placeholder="Ask a question...">
                 </div>
                 <div class="continue">
                         <a href="courseChapter2.html"><button class="continue-button">Continue >></button></a>
