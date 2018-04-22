@@ -273,7 +273,7 @@ p {
 .chat-input {
     border: 2px solid;
     border-color: silver;
-    height: 20px;
+    /* height: 20px; */
 }
 
 .continue {
