@@ -44,6 +44,7 @@ p {
 
 .name:hover{
     color: var(--transition-color);
+    cursor: pointer;
 }
 .head {
     width: 100%;
@@ -76,6 +77,7 @@ p {
 
 .navbarbutton:hover{
     color: var(--transition-color);
+    cursor: pointer;
 }
 #home {
     grid-column: 1;
@@ -137,15 +139,18 @@ p {
 #completed-chapter:hover {
     background-color: var(--background-color);
     color: black;
+    cursor: pointer;
 }
 
 #current-chapter:hover {
     background-color: var(--background-color);
     color: black;
+    cursor: pointer;
 }
 #future-chapter:hover {
     background-color: var(--background-color);
     color: black;
+    cursor: pointer;
 }
 
 #completed-chapter {
@@ -290,6 +295,7 @@ p {
 .continue-button:hover {
     color: black;
     background-color: var(--background-color);
+    cursor: pointer;
 }
 
 .chat-question{
