@@ -109,8 +109,10 @@ function createCancelAndSubmitButton(dropdown){
 
     if (dropdown == 1){
         confirm.onclick = applyFilters;
-    }else{
+    }else if (dropdown ==2){
         confirm.onclick = applyTimeLimit;
+    }else{
+        confirm.onclick = applyDifficulty;
     }
     buttons.push(confirm);
     return buttons;
@@ -256,6 +258,20 @@ function closeDifficultyDropdown(){
     if (document.getElementById('difficultyDropdown') != null){
         document.getElementById('difficultyDropdown').remove();
     }
+}
+
+function applyDifficulty(){
+    // document.getElementById('alfredo').remove();
+    // document.getElementById('bunBoHue').remove();
+    // document.getElementById('chicken').remove();
+    displayShrimpFriedRice();
+    var tags = document.getElementById('tags');
+    var tag = document.createElement('button');
+    tag.id = 'difficultyTag'
+    tag.className = 'dropdowntoggle';
+    tag.innerHTML = 'Intermediate';
+    tags.appendChild(tag);
+    closeDifficultyDropdown();
 }
 
 function displayShrimpFriedRice(){

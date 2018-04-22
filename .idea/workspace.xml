@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc92bcbb-c199-4a84-b2a1-ed90a1f117b3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/index.css" afterPath="$PROJECT_DIR$/index.css" />
+      <change beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,8 +47,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="126" column="1" lean-forward="true" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
+            <state relative-caret-position="632">
+              <caret line="227" column="13" lean-forward="false" selection-start-line="227" selection-start-column="13" selection-end-line="227" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -79,8 +79,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1221">
-              <caret line="236" column="30" lean-forward="false" selection-start-line="236" selection-start-column="30" selection-end-line="236" selection-end-column="30" />
+            <state relative-caret-position="1033">
+              <caret line="269" column="27" lean-forward="false" selection-start-line="269" selection-start-column="27" selection-end-line="269" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -109,8 +109,9 @@
       <find>createCancelAndSubmitButton</find>
       <find>showDifficulty</find>
       <find>categories</find>
-      <find>difficulty</find>
       <find>dropdown</find>
+      <find>difficulty</find>
+      <find>applyTimeLimit</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,9 +127,9 @@
       <list>
         <option value="$PROJECT_DIR$/community.html" />
         <option value="$PROJECT_DIR$/community.css" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/community.js" />
+        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/index.css" />
       </list>
     </option>
@@ -297,12 +298,12 @@
       <option name="presentableId" value="Default" />
       <updated>1524164661592</updated>
       <workItem from="1524164663041" duration="19655000" />
-      <workItem from="1524339478978" duration="6406000" />
+      <workItem from="1524339478978" duration="6614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26061000" />
+    <option name="totallyTimeSpent" value="26269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1023" y="-1417" width="1720" height="1417" extended-state="0" />
@@ -451,6 +452,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/community.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-692">
+          <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="32" />
+          <folding>
+            <marker date="1524421580847" expanded="true" signature="1794:5950" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/community.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="62" column="24" lean-forward="false" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -467,32 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/community.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-692">
-          <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="32" />
-          <folding>
-            <marker date="1524421580847" expanded="true" signature="1794:5950" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1221">
-          <caret line="236" column="30" lean-forward="false" selection-start-line="236" selection-start-column="30" selection-end-line="236" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/community.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="62" column="24" lean-forward="false" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
@@ -501,10 +494,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1033">
+          <caret line="269" column="27" lean-forward="false" selection-start-line="269" selection-start-column="27" selection-end-line="269" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="126" column="1" lean-forward="true" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
+        <state relative-caret-position="632">
+          <caret line="227" column="13" lean-forward="false" selection-start-line="227" selection-start-column="13" selection-end-line="227" selection-end-column="13" />
           <folding />
         </state>
       </provider>
