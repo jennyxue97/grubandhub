@@ -122,6 +122,10 @@ header {
     position:relative;
 }
 
+#dropdown{
+    margin-bottom: 0;
+}
+
 .dropdowntoggle{
     width: 30%;
     font-family: 'Raleway', sans-serif;
@@ -130,7 +134,7 @@ header {
     color: var(--text-color);
     padding: 10px 0px 10px 0px;
     background-color: white;
-    margin: 0px 10px 10px 0px;
+    margin: 0px 10px 0px 0px;
     border: 1px solid;
 }
 
