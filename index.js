@@ -20,9 +20,9 @@ var showDifficultyDropdown = false;
 function submitForm(){
     var isValid = true;
     var query = document.getElementById("searchbar").value;
-    if (query.toLowerCase() != "shrimp fried rice") {
-        isValid = false;
-    }
+    // if (query.toLowerCase() != "shrimp fried rice") {
+    //     isValid = false;
+    // }
 
     if (!isValid) {
         document.getElementById("searchbar").value = "";
