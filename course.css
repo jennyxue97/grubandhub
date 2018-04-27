@@ -178,7 +178,9 @@ p {
 
 .left-content {
     margin-top: 20px;
-    padding: 5px 15px 5px 15px;
+    display: grid;
+    grid-auto-rows: 90% 10%;
+    padding: 5px 20px 15px 20px;
     background: white;
     border: 1px solid;
     border-color: var(--text-color);
@@ -239,7 +241,7 @@ p {
 .right-content {
     margin-top: 20px;
     display: grid;
-    grid-template-rows: 10% 70% 20%;
+    grid-template-rows: 10% 73% 17%;
     padding: 5px 15px 5px 15px;
     background: white;
     border: 1px solid;
@@ -280,7 +282,7 @@ p {
     margin: 20px 5px 10px 5px;
 }
 
-.continue-button {
+.nav-button {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-size: 25px;   
@@ -292,7 +294,7 @@ p {
     color: white;
 }
 
-.continue-button:hover {
+.nav-button:hover {
     color: black;
     background-color: var(--background-color);
     cursor: pointer;
