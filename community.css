@@ -55,7 +55,7 @@ button:hover{
     color: var(--text-color);
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     background: transparent;
     border: 0px;
     padding: 0px;
@@ -87,7 +87,7 @@ button:hover{
     width: 95%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-color);
     padding: 10px 0px 10px 35px;
 }
@@ -102,7 +102,7 @@ button:hover{
 #find{
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-color);
     padding: 10px 10px 10px 10px;
     background-color: white;
@@ -125,7 +125,7 @@ button:hover{
     width: 30%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-color);
     padding: 10px 0px 10px 0px;
     background-color: white;
@@ -147,7 +147,7 @@ button:hover{
     height: 8%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-color);
     padding: 10px;
     background-color: white;
@@ -164,7 +164,7 @@ button:hover{
 .controlButton{
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-color);
     margin: 1px;
     margin-top:14%;
@@ -220,7 +220,7 @@ img {
     color: gray;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     padding: 20px 10px 0px 10px;
 }
 
@@ -233,7 +233,7 @@ img {
     color: var(--text-color);
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 14spx;
     padding: 10px;
     text-align: justify;
 }
@@ -242,7 +242,7 @@ img {
     color: gray;
     font-family: 'Raleway', sans-serif;
     font-style: italic;
-    font-size: 14px;
+    font-size: 16px;
     padding: 20px 10px 5px 5px;
     text-align: right;
 }
@@ -250,7 +250,7 @@ img {
 .subtitle{
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-color);
     padding: 20px 0px 20px 0px;
 }
@@ -261,7 +261,7 @@ img {
     width: 50%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-color);
     padding: 10px 0 10px 0;
     background-color: white;
@@ -323,7 +323,7 @@ img {
     /*height: 30px;*/
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-color);
     padding: 10px 0 10px 0;
     background-color: white;
@@ -345,7 +345,7 @@ img {
     width: 50%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-color);
     padding: 10px 0 10px 0;
     background-color: white;
@@ -410,7 +410,7 @@ img {
     width: 200px;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     padding: 5px 20px 5px 20px;
     background-color: white;
     border: 1px solid;
@@ -450,7 +450,7 @@ img {
     width: 30%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--submit-button-color);
     padding: 10px 0px 10px 0px;
     background-color: white;
