@@ -9,7 +9,7 @@ Util.events(document, {
 
         dom.new_post_button.addEventListener("click", overlay_on);
         dom.user_image_selector.setAttribute("onchange", "url()");
-        dom.submit_button.addEventListener("click", getForm);
+        dom.submit_button.addEventListener("onclick", getForm);
         dom.cancel_button.addEventListener("click", overlay_off);
 
     },
@@ -26,6 +26,25 @@ function overlay_on() {
 function overlay_off() {
     document.getElementById("overlay").style.display = "none";
     document.body.style.overflow = "auto";
+
+
+    // reset form
+    // delete image being shown
+    var user_image = Util.one(".user-image");
+    user_image.src = "";
+    user_image.classList.remove("visible");
+
+    // clear text
+    var fields = [Util.one("#input-title"), Util.one("#input-text")];
+    for (var f of fields) {
+        f.value = "";
+    }
+
+    // reset buttons
+    var buttons = Util.all(".new-post-form-radio-holder > label > input");
+    for (var radio of buttons) {
+        radio.checked = false;
+    }
 }
 
 /*
