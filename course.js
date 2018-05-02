@@ -11,7 +11,7 @@ window.onload = function () {
 window.onkeydown = function(e) {
     var key = e.keyCode ? e.keyCode : e.which;
     // Enter key or right arrow
-    if (key == 13 || key == 39) {
+    if (key == 39 /*|| key == 13*/) {
         document.getElementById("continue-button").click();
     }
     // Left arrow
