@@ -19,7 +19,7 @@ const categories = ['Share','Help','Tips'];
 var showCategoryDrop = false;
 
 function addNewPost(){
-    var data = getForm();
+    var data = getValidateForm();
     var currentContent = document.getElementById("content").innerHTML;
     var newData = "<div class='post'> <div class='postpic'> <img src=" + data.image + "> </div>" +
     "<div class='postinfo'> <div class='postheader'> <div class='posttitle'>" + data.title.toUpperCase() +

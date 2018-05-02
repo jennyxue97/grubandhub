@@ -289,7 +289,7 @@ img {
     display: flex;
     flex-direction: column;
 
-    width: 400px;
+    width: 410px;
     height: auto;
 
     border: 2px solid var(--text-color);
@@ -377,7 +377,7 @@ img {
 
 #new-post-form {
     display: grid;
-    grid-template-columns: 100px auto;
+    grid-template-columns: 110px auto;
     grid-row-gap: 10px;
 
     color: var(--text-color);
@@ -386,16 +386,28 @@ img {
     font-size: 20px;
 }
 
+.category-label {
+    align-self: center;
+}
+
 #new-post-form > textarea {
     resize: none;
 }
 
+.new-post-form-radio-holder {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px 0 5px
+}
+
 .new-post-form-radio-holder > label {
-    margin: 0 10px 0 10px;
+    /*margin: 0 10px 0 10px;*/
 }
 
 .new-post-form-radio-holder > label:first-child {
-    margin-left: 0;
+    /*margin-left: 0;*/
 }
 
 /* hides original radio button (so I can use images instead) */
@@ -407,11 +419,10 @@ img {
 
 .new-post-form-radio-holder > label > span {
     cursor:pointer;
-    width: 200px;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-size: 16px;
-    padding: 5px 20px 5px 20px;
+    padding: 5px 25px 5px 25px;
     background-color: white;
     border: 1px solid;
 }
@@ -466,3 +477,20 @@ img {
 #input-text, #input-title {
     border: none;
 }
+
+.error-button {
+    box-shadow: 0 0 1px 1px red;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.error-message {
+    font-family: 'Raleway', sans-serif;
+    color: red;
+    padding-bottom: 1px;
+    font-size: 10pt;
+}
+
+/*::placeholder {*/
+    /*font-family: 'Raleway', sans-serif;*/
+    /*color: red;*/
+/*}*/
