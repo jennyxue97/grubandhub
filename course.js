@@ -1,11 +1,31 @@
 window.onload = function () {
     setUpVideo();
+    addMaterialCheckboxes();
 
     document.getElementById("chat-input").addEventListener("keydown", function(e) {
         // Enter is pressed
         if (e.keyCode == 13) { askQuestion()};
     });
 };
+
+window.onkeydown = function(e) {
+    var key = e.keyCode ? e.keyCode : e.which;
+    // Enter key or right arrow
+    if (key == 13 || key == 39) {
+        document.getElementById("continue-button").click();
+    }
+    // Left arrow
+    if (key == 37) {
+        document.getElementById("previous-button").click();
+    }
+ }
+
+function addMaterialCheckboxes(){
+    var items = document.getElementsByClassName("material-item");
+    for (var idx = 0; idx < items.length; idx++) {
+        items[idx].insertAdjacentHTML('afterbegin', '<input type="checkbox" style="font-size: 1.5em;">&nbsp;');
+    }
+}
 
 function askQuestion(){
     var question = document.createElement('div');
