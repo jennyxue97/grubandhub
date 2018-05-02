@@ -3,11 +3,11 @@
     --background-color: #ededee;
     --transition-color: #dab0a2;
 
-    --share-button-color: darkred;
-    --question-button-color: darkred;
-    --tips-button-color:  darkred;
+    --share-button-color: #b9a56d;
+    --question-button-color: #b9a56d;
+    --tips-button-color:  #b9a56d;
 
-    --submit-button-color: forestgreen;
+    --submit-button-color: #4c4c4f;
 }
 body {
     background-color: var(--background-color);
@@ -462,4 +462,7 @@ img {
 .new-post-submit-button:active {
     background-color: var(--submit-button-color);
     color: white;
+}
+#input-text, #input-title {
+    border: none;
 }
