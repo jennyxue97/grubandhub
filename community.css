@@ -233,7 +233,7 @@ img {
     color: var(--text-color);
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14spx;
+    font-size: 14px;
     padding: 10px;
     text-align: justify;
 }
@@ -271,18 +271,23 @@ img {
 }
 
 /* https://www.w3schools.com/howto/howto_css_overlay.asp */
+#overlay-shadow {
+    position: fixed; /* Sit on top of the page content */
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
 #overlay {
+    align-items: center;
+    justify-content: center;
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-
-    align-items: center;
-    justify-content: center;
 }
 
 .new-post {
@@ -294,6 +299,7 @@ img {
 
     border: 2px solid var(--text-color);
     padding: 10px;
+    z-index: 3;
 
     background-color: var(--background-color);
 }
@@ -362,17 +368,18 @@ img {
 }
 
 .user-image {
+    display: none;
     visibility: hidden;
-    height: 0;
-    width: 0;
-}
-.visible {
-    visibility: visible;
     width: 100%;
     height: 100%;
     max-height: 250px;
     object-fit: contain;
     margin-bottom: 10px;
+}
+.visible {
+    display: block;
+    visibility: visible;
+
 }
 
 #new-post-form {
@@ -490,14 +497,70 @@ img {
     font-size: 10pt;
 }
 
-<<<<<<< HEAD
-::placeholder {
+#confirm {
+    visibility: hidden;
+    width: 300px;
+    height: 100px;
+    position: fixed; /* Sit on top of the page content */
+    background-color: var(--background-color);
+    border: 1px solid var(--text-color);
     font-family: 'Raleway', sans-serif;
-    color: red;
+    font-style: normal;
+    font-size: 20px;
+
+    display: grid;
+    grid-template-areas:
+            "q q q"
+            ". n y";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+    justify-items: center;
+
+    z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
 }
-=======
-/*::placeholder {*/
-    /*font-family: 'Raleway', sans-serif;*/
-    /*color: red;*/
-/*}*/
->>>>>>> d45e079646621cccd31acb9460b2c84d1563dccc
+
+#confirm-text {
+    grid-area: q;
+}
+
+#confirm-yes {
+    display: none;
+    visibility: hidden;
+}
+
+#confirm-yes-button {
+    grid-area: y;
+
+    padding: 5px 25px 5px 25px;
+}
+
+#confirm-no {
+    display: none;
+    visibility: hidden;
+}
+
+#confirm-no-button {
+    grid-area: n;
+
+    padding: 5px 11px 5px 11px;
+}
+
+#confirm > label {
+    cursor:pointer;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid var(--submit-button-color);
+    color: var(--submit-button-color);
+}
+
+#confirm > input:checked + label,
+#confirm > input:active + label{
+    background-color: var(--submit-button-color);
+    color: white;
+}
+
+.behind-shadow {
+    z-index: 1;
+}

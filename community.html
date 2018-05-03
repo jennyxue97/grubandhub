@@ -159,6 +159,7 @@
     </div>
 
 <div id="overlay">
+    <div id="overlay-shadow"></div>
     <div class="new-post">
         <div class="new-post-title-row">
             <div class="new-post-title">New Post</div>
@@ -174,11 +175,7 @@
             <input type="text" id="input-title" name="title">
             <div class="new-post-form-label">Text:</div>
             <textarea id="input-text" name="text" form="new-post-form" rows=5 cols=100></textarea>
-<<<<<<< HEAD
-            <div class="new-post-form-label category-label">Category:</div>
-=======
             <div class="new-post-form-label category-label">Category: <b>*</b></div>
->>>>>>> d45e079646621cccd31acb9460b2c84d1563dccc
             <div class="new-post-form-radio-holder">
                 <label>
                     <input id="input-share" type="radio" name="post-type" value="Share">
@@ -197,7 +194,17 @@
         </form>
 
         <button class="new-post-submit-button" id="new-post-submit-button">Submit</button>
+
+    </div>
+
+    <div id="confirm">
+        <div id="confirm-text">Leave and discard this post?</div>
+        <input type="button" id="confirm-yes">
+        <label id="confirm-yes-button" for="confirm-yes">OK</label>
+        <input type="button" id="confirm-no">
+        <label id="confirm-no-button" for="confirm-no">Cancel</label>
     </div>
 </div>
+
 </body>
 </html>

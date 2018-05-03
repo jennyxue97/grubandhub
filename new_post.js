@@ -7,21 +7,27 @@ Util.events(document, {
         dom.submit_button = Util.one(".new-post-submit-button");
         dom.cancel_button = Util.one(".new-post-cancel-button");
         dom.upload_button = Util.one(".new-post-upload-button");
+        dom.confirm_overlay = Util.one("#confirm");
+        dom.confirm_yes = Util.one("#confirm-yes-button");
+        dom.confirm_no = Util.one("#confirm-no-button");
+        dom.new_post_overlay = Util.one(".new-post");
 
         dom.new_post_button.addEventListener("click", overlay_on);
         dom.user_image_selector.setAttribute("onchange", "url()");
         dom.submit_button.addEventListener("onclick", getValidateForm);
-        dom.cancel_button.addEventListener("click", overlay_off);
+        dom.cancel_button.addEventListener("click", confirm_overlay_control);
         Util.one("#image-path").addEventListener("change", remove_no_image_share);
-<<<<<<< HEAD
-=======
         Util.one("#input-title").addEventListener("change", check_title);
+        dom.confirm_yes.addEventListener("click", function() {
+            confirm_overlay_off();
+            overlay_off();
+        });
+        dom.confirm_no.addEventListener("click", confirm_overlay_off);
 
         var buttons = Util.all(".new-post-form-radio-holder > label > input");
         for (var b of buttons) {
             b.addEventListener("change", check_radio);
         }
->>>>>>> d45e079646621cccd31acb9460b2c84d1563dccc
     },
 });
 
@@ -62,6 +68,46 @@ function overlay_off() {
     remove_no_post_category();
 }
 
+function confirm_overlay_on() {
+    dom.new_post_overlay.classList.add("behind-shadow");
+    dom.confirm_overlay.style.visibility = "visible";
+}
+
+function confirm_overlay_off() {
+    dom.new_post_overlay.classList.remove("behind-shadow");
+    dom.confirm_overlay.style.visibility = "hidden";
+}
+
+function confirm_overlay_control() {
+    if (form_filled()) {
+        confirm_overlay_on();
+    } else {
+        overlay_off();
+    }
+}
+
+function form_filled() {
+    var user_image = Util.one(".user-image").getAttribute("src");
+    if (user_image !== "") {
+        return true;
+    }
+
+    var fields = [Util.one("#input-title"), Util.one("#input-text")];
+    var buttons = Util.all(".new-post-form-radio-holder > label > input");
+
+    for (var f of fields) {
+        if (f.value.trim() !== "") {
+            return true;
+        }
+    }
+    for (var radio of buttons) {
+        if (radio.checked === true) {
+            return true;
+        }
+    }
+    return false;
+}
+
 /*
 https://stackoverflow.com/questions/1628826/how-to-add-an-onchange-event-to-a-select-box-via-javascript
  */
@@ -96,13 +142,8 @@ function getValidateForm() {
         throw e;
     }
     remove_no_image_share();
-<<<<<<< HEAD
-    // remove_no_title();
-    // remove_no_post_category();
-=======
     remove_no_title();
     remove_no_post_category();
->>>>>>> d45e079646621cccd31acb9460b2c84d1563dccc
     return form;
 }
 
@@ -188,8 +229,6 @@ function remove_no_image_share() {
     message.parentNode.removeChild(message);
 }
 
-<<<<<<< HEAD
-=======
 function check_title() {
     if (Util.one("#input-title").value === "") {
         no_title();
@@ -198,18 +237,12 @@ function check_title() {
     }
 }
 
->>>>>>> d45e079646621cccd31acb9460b2c84d1563dccc
 function no_title() {
     var title_input = Util.one("#input-title");
     // title_input.setAttribute("placeholder", " Please give a title for the post");
     title_input.classList.add("error-button");
 }
 
-<<<<<<< HEAD
-function no_post_category() {
-    var radio_group = Util.one(".new-post-form-radio-holder");
-    radio_group.classList.add("error-button");
-=======
 function remove_no_title() {
     var title_input = Util.one("#input-title");
     title_input.classList.remove("error-button");
@@ -235,5 +268,4 @@ function no_post_category() {
 function remove_no_post_category() {
     var radio_group = Util.one(".new-post-form-radio-holder");
     radio_group.classList.remove("error-button");
->>>>>>> d45e079646621cccd31acb9460b2c84d1563dccc
 }
