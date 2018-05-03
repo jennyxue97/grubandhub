@@ -13,6 +13,15 @@ Util.events(document, {
         dom.submit_button.addEventListener("onclick", getValidateForm);
         dom.cancel_button.addEventListener("click", overlay_off);
         Util.one("#image-path").addEventListener("change", remove_no_image_share);
+<<<<<<< HEAD
+=======
+        Util.one("#input-title").addEventListener("change", check_title);
+
+        var buttons = Util.all(".new-post-form-radio-holder > label > input");
+        for (var b of buttons) {
+            b.addEventListener("change", check_radio);
+        }
+>>>>>>> d45e079646621cccd31acb9460b2c84d1563dccc
     },
 });
 
@@ -46,6 +55,11 @@ function overlay_off() {
     for (var radio of buttons) {
         radio.checked = false;
     }
+
+    // reset errors
+    remove_no_image_share();
+    remove_no_title();
+    remove_no_post_category();
 }
 
 /*
@@ -82,8 +96,13 @@ function getValidateForm() {
         throw e;
     }
     remove_no_image_share();
+<<<<<<< HEAD
     // remove_no_title();
     // remove_no_post_category();
+=======
+    remove_no_title();
+    remove_no_post_category();
+>>>>>>> d45e079646621cccd31acb9460b2c84d1563dccc
     return form;
 }
 
@@ -169,13 +188,52 @@ function remove_no_image_share() {
     message.parentNode.removeChild(message);
 }
 
+<<<<<<< HEAD
+=======
+function check_title() {
+    if (Util.one("#input-title").value === "") {
+        no_title();
+    } else {
+        remove_no_title();
+    }
+}
+
+>>>>>>> d45e079646621cccd31acb9460b2c84d1563dccc
 function no_title() {
     var title_input = Util.one("#input-title");
     // title_input.setAttribute("placeholder", " Please give a title for the post");
     title_input.classList.add("error-button");
 }
 
+<<<<<<< HEAD
 function no_post_category() {
     var radio_group = Util.one(".new-post-form-radio-holder");
     radio_group.classList.add("error-button");
+=======
+function remove_no_title() {
+    var title_input = Util.one("#input-title");
+    title_input.classList.remove("error-button");
+}
+
+function check_radio() {
+    var buttons = Util.all(".new-post-form-radio-holder > label > input");
+
+    for (var radio of buttons) {
+        if (radio.checked === true) {
+            remove_no_post_category();
+            return;
+        }
+    }
+    no_post_category();
+}
+
+function no_post_category() {
+    var radio_group = Util.one(".new-post-form-radio-holder");
+    radio_group.classList.add("error-button");
+}
+
+function remove_no_post_category() {
+    var radio_group = Util.one(".new-post-form-radio-holder");
+    radio_group.classList.remove("error-button");
+>>>>>>> d45e079646621cccd31acb9460b2c84d1563dccc
 }

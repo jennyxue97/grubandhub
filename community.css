@@ -289,7 +289,7 @@ img {
     display: flex;
     flex-direction: column;
 
-    width: 400px;
+    width: 410px;
     height: auto;
 
     border: 2px solid var(--text-color);
@@ -377,7 +377,7 @@ img {
 
 #new-post-form {
     display: grid;
-    grid-template-columns: 100px auto;
+    grid-template-columns: 110px auto;
     grid-row-gap: 10px;
 
     color: var(--text-color);
@@ -490,7 +490,14 @@ img {
     font-size: 10pt;
 }
 
+<<<<<<< HEAD
 ::placeholder {
     font-family: 'Raleway', sans-serif;
     color: red;
 }
+=======
+/*::placeholder {*/
+    /*font-family: 'Raleway', sans-serif;*/
+    /*color: red;*/
+/*}*/
+>>>>>>> d45e079646621cccd31acb9460b2c84d1563dccc
