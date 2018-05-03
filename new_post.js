@@ -113,6 +113,7 @@ https://stackoverflow.com/questions/1628826/how-to-add-an-onchange-event-to-a-se
  */
 function url() {
     var input = Util.one("#image-path");
+    console.log(input.files);
     if (input.files !== undefined) {
         var reader = new FileReader();
         reader.onload = function (e) {
@@ -196,6 +197,7 @@ function FormError() {}
 FormError.prototype = new Error();
 
 function no_image_share() {
+    remove_no_image_share();
     var error_message = Util.create("div", {class: "error-message no-image-share", id: "no-image-share"});
     error_message.innerHTML = "Please upload an image for Share posts";
 
@@ -254,6 +256,12 @@ function check_radio() {
     for (var radio of buttons) {
         if (radio.checked === true) {
             remove_no_post_category();
+            if (radio.value !== "Share") {
+                remove_no_image_share();
+            } else {
+                if (Util.one(".user-image").getAttribute("src") === "")
+                no_image_share();
+            }
             return;
         }
     }
