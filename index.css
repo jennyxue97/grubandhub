@@ -104,6 +104,10 @@ header {
     width: 100%;
 }
 
+#find:hover{
+    cursor: pointer;
+}
+
 .searchicon{
     position: absolute;
     left: 60px;
@@ -147,7 +151,7 @@ header {
 .subtitle{
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 16px;
+    font-size: 20px;
     color: var(--text-color);
     padding: 20px 0px 20px 0px;
 }
@@ -155,7 +159,7 @@ header {
     width: 20%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-color);
     padding: 10px;
     background-color: white;
@@ -175,7 +179,7 @@ header {
 .controlButton{
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-color);
     margin: 1px;
     margin-top:14%;
@@ -199,7 +203,7 @@ header {
     width: 23%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-color);
     padding: 10px;
     background-color: white;
@@ -295,15 +299,15 @@ header {
 }
 
 .foodtitle{
-    padding: 20px 0px 10px 0px;
+    padding: 15px 0px 10px 0px;
     background-color: white;
     width: 100%;
     text-align: center;
     vertical-align: middle;
     color: var(--text-color);
     font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-size: 16px;
+    font-weight: bolder;
+    font-size: 20px;
     grid-row: 1;
 }
 

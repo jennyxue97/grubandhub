@@ -22,8 +22,8 @@ function addNewPost(){
     var data = getValidateForm();
     var currentContent = document.getElementById("content").innerHTML;
     var newData = "<div class='post'> <div class='postpic'> <img src=" + data.image + "> </div>" +
-    "<div class='postinfo'> <div class='postheader'> <div class='posttitle'>" + data.title.toUpperCase() +
-    "</div> <div class='postfooter'>" + data.category + "</div> </div> <div class='postdescription'><p>" + 
+    "<div class='postinfo'> <div class='postheader'> <div class='posttitle'> <a href='communityPage.html'>" + data.title.toUpperCase() +
+    "</a> </div> <div class='postfooter'>" + data.category + "</div> </div> <div class='postdescription'><p>" + 
     data.text + "</p> </div> </div> </div>";
     document.getElementById("content").innerHTML = newData + currentContent;
 }

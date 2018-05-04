@@ -138,16 +138,12 @@ button:hover{
 }
 
 
-#categories{
-
-}
-
 #categoryDropdown{
     width: 15%;
     height: 8%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-color);
     padding: 10px;
     background-color: white;
@@ -164,7 +160,7 @@ button:hover{
 .controlButton{
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-color);
     margin: 1px;
     margin-top:14%;
@@ -219,7 +215,7 @@ img {
 .posttitle{
     color: gray;
     font-family: 'Raleway', sans-serif;
-    font-style: normal;
+    font-weight: bolder;
     font-size: 16px;
     padding: 20px 10px 0px 10px;
 }
@@ -250,7 +246,7 @@ img {
 .subtitle{
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 16px;
+    font-size: 20px;
     color: var(--text-color);
     padding: 20px 0px 20px 0px;
 }
@@ -564,3 +560,8 @@ img {
 .behind-shadow {
     z-index: 1;
 }
+
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
