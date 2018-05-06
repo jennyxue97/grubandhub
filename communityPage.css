@@ -1,0 +1,129 @@
+:root {
+    --text-color: #b97f6d;
+    --background-color: #ededee;
+    --transition-color: #dab0a2;
+
+    --share-button-color: #b9a56d;
+    --question-button-color: #b9a56d;
+    --tips-button-color:  #b9a56d;
+
+    --submit-button-color: #4c4c4f;
+}
+
+html{
+    height: 100%;
+}
+body {
+    background-color: var(--background-color);
+    margin: 25px 45px 25px 45px;
+    overflow: hidden;
+}
+header {
+    grid-column: 1;
+}
+
+.name{
+    color: var(--text-color);
+    font-family: 'Fjalla One', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    background: transparent;
+    border: 0px;
+    padding: 0px;
+}
+
+button:hover{
+    color: var(--transition-color);
+    cursor: pointer;
+}
+.head {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 20px;
+}
+
+.navbar {
+    display: grid;
+    grid-column: 4;
+}
+
+.navbarmenu{
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    padding: 5px 0px 5px 0px;
+}
+
+.navbarbutton{
+    color: var(--text-color);
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    background: transparent;
+    border: 0px;
+    padding: 0px;
+}
+
+#home {
+    grid-column: 1;
+}
+
+#community{
+    grid-column: 2;
+}
+
+#about{
+    grid-column: 3;
+}
+
+#current{
+    color: black;
+}
+
+.pageInfo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+.img{
+    height: 85%;
+    width: 90%;
+}
+
+.postheader{
+    display: grid;
+    grid-template-columns:  80% 20%;
+}
+.posttitle{
+    color: gray;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 24px;
+    padding: 0px 10px 0px 10px;
+}
+
+.postdescription{
+    color: var(--text-color);
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.postfooter{
+    color: gray;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    padding: 20px 10px 20px 10px;
+}

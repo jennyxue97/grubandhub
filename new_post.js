@@ -7,13 +7,22 @@ Util.events(document, {
         dom.submit_button = Util.one(".new-post-submit-button");
         dom.cancel_button = Util.one(".new-post-cancel-button");
         dom.upload_button = Util.one(".new-post-upload-button");
+        dom.confirm_overlay = Util.one("#confirm");
+        dom.confirm_yes = Util.one("#confirm-yes-button");
+        dom.confirm_no = Util.one("#confirm-no-button");
+        dom.new_post_overlay = Util.one(".new-post");
 
         dom.new_post_button.addEventListener("click", overlay_on);
         dom.user_image_selector.setAttribute("onchange", "url()");
         dom.submit_button.addEventListener("onclick", getValidateForm);
-        dom.cancel_button.addEventListener("click", overlay_off);
+        dom.cancel_button.addEventListener("click", confirm_overlay_control);
         Util.one("#image-path").addEventListener("change", remove_no_image_share);
         Util.one("#input-title").addEventListener("change", check_title);
+        dom.confirm_yes.addEventListener("click", function() {
+            confirm_overlay_off();
+            overlay_off();
+        });
+        dom.confirm_no.addEventListener("click", confirm_overlay_off);
 
         var buttons = Util.all(".new-post-form-radio-holder > label > input");
         for (var b of buttons) {
@@ -59,11 +68,52 @@ function overlay_off() {
     remove_no_post_category();
 }
 
+function confirm_overlay_on() {
+    dom.new_post_overlay.classList.add("behind-shadow");
+    dom.confirm_overlay.style.visibility = "visible";
+}
+
+function confirm_overlay_off() {
+    dom.new_post_overlay.classList.remove("behind-shadow");
+    dom.confirm_overlay.style.visibility = "hidden";
+}
+
+function confirm_overlay_control() {
+    if (form_filled()) {
+        confirm_overlay_on();
+    } else {
+        overlay_off();
+    }
+}
+
+function form_filled() {
+    var user_image = Util.one(".user-image").getAttribute("src");
+    if (user_image !== "") {
+        return true;
+    }
+
+    var fields = [Util.one("#input-title"), Util.one("#input-text")];
+    var buttons = Util.all(".new-post-form-radio-holder > label > input");
+
+    for (var f of fields) {
+        if (f.value.trim() !== "") {
+            return true;
+        }
+    }
+    for (var radio of buttons) {
+        if (radio.checked === true) {
+            return true;
+        }
+    }
+    return false;
+}
+
 /*
 https://stackoverflow.com/questions/1628826/how-to-add-an-onchange-event-to-a-select-box-via-javascript
  */
 function url() {
     var input = Util.one("#image-path");
+    console.log(input.files);
     if (input.files !== undefined) {
         var reader = new FileReader();
         reader.onload = function (e) {
@@ -147,6 +197,7 @@ function FormError() {}
 FormError.prototype = new Error();
 
 function no_image_share() {
+    remove_no_image_share();
     var error_message = Util.create("div", {class: "error-message no-image-share", id: "no-image-share"});
     error_message.innerHTML = "Please upload an image for Share posts";
 
@@ -205,6 +256,12 @@ function check_radio() {
     for (var radio of buttons) {
         if (radio.checked === true) {
             remove_no_post_category();
+            if (radio.value !== "Share") {
+                remove_no_image_share();
+            } else {
+                if (Util.one(".user-image").getAttribute("src") === "")
+                no_image_share();
+            }
             return;
         }
     }

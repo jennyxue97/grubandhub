@@ -22,9 +22,6 @@
             <div class="navbarmenu" id="community">
                 <button class="navbarbutton" id="current">Community</button> 
             </div>
-            <div class="navbarmenu" id="about">
-                <button class="navbarbutton">Profile</button> 
-            </div>
         </div>
     </div>
 
@@ -61,9 +58,11 @@
             </div>
             <div class="postinfo">
                 <div class="postheader">
-                    <div class="posttitle">
-                        VEGAN BAO
-                    </div>
+                    <a href="communityPage.html">
+                        <div class="posttitle">
+                            VEGAN BAO
+                        </div>
+                    </a>
                     <div class="postfooter">
                         Share
                     </div>
@@ -76,14 +75,18 @@
             </div>
         </div>
         <div class="post">
-            <div class="postpic">
-                <img src="assets/korean_fried_chicken.jpg">
-            </div>
+            <a href="communityPage.html">
+                <div class="postpic">
+                    <img src="assets/korean_fried_chicken.jpg">
+                </div>
+            </a>
             <div class="postinfo">
                 <div class="postheader">
-                    <div class="posttitle">
-                        KOREAN FRIED CHICKEN
-                    </div>
+                    <a href="communityPage.html">
+                        <div class="posttitle">
+                            KOREAN FRIED CHICKEN
+                        </div>
+                    </a>
                 <div class="postfooter">
                         Share
                     </div>
@@ -98,9 +101,11 @@
         <div class="help">
             <div class="postinfo">
                 <div class="postheader">
-                    <div class="posttitle">
-                        21 COOKING TIPS THAT WILL CHANGE YOUR LIFE
-                    </div>
+                    <a href="communityPage.html">
+                        <div class="posttitle">
+                            21 COOKING TIPS THAT WILL CHANGE YOUR LIFE
+                        </div>
+                    </a>
                     <div class="postfooter">
                         Tips
                     </div>
@@ -119,9 +124,11 @@
         <div class="help">
             <div class="postinfo">
                 <div class="postheader">
-                    <div class="posttitle">
-                        HOW TO BEAT EGG WHITES BY HAND?
-                    </div>
+                    <a href="communityPage.html">
+                        <div class="posttitle">
+                            HOW TO BEAT EGG WHITES BY HAND?
+                        </div>
+                    </a>
                     <div class="postfooter">
                         Help
                     </div>
@@ -136,14 +143,18 @@
             </div>
         </div>
         <div class="post">
-            <div class="postpic">
-                <img src="assets/poached_egg.jpg">
-            </div>
+            <a href="communityPage.html">
+                <div class="postpic">
+                    <img src="assets/poached_egg.jpg">
+                </div>
+            </a>    
             <div class="postinfo">
                 <div class="postheader">
-                    <div class="posttitle">
-                        THE PERFECT POACHED EGG
-                    </div>
+                    <a href="communityPage.html">
+                        <div class="posttitle">
+                            THE PERFECT POACHED EGG
+                        </div>
+                    </a>
                     <div class="postfooter">
                         Share
                     </div>
@@ -159,6 +170,7 @@
     </div>
 
 <div id="overlay">
+    <div id="overlay-shadow"></div>
     <div class="new-post">
         <div class="new-post-title-row">
             <div class="new-post-title">New Post</div>
@@ -193,7 +205,17 @@
         </form>
 
         <button class="new-post-submit-button" id="new-post-submit-button">Submit</button>
+
+    </div>
+
+    <div id="confirm">
+        <div id="confirm-text">Leave and discard this post?</div>
+        <input type="button" id="confirm-yes">
+        <label id="confirm-yes-button" for="confirm-yes">OK</label>
+        <input type="button" id="confirm-no">
+        <label id="confirm-no-button" for="confirm-no">Cancel</label>
     </div>
 </div>
+
 </body>
 </html>
