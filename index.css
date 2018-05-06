@@ -292,7 +292,13 @@ header {
     width: 100%;
 }
 
+input:focus {
+    outline-width: 0;
+}
 
+#find:focus{
+    outline-width: 0px;
+}
 .fooditem{
     display: grid;
     width: 100%;
@@ -312,9 +318,9 @@ header {
     color: var(--text-color);
     font-family: 'Raleway', sans-serif;
     font-weight: bolder;
-    font-size: 20px;
     grid-row: 1;
     border-radius: 15px 15px 0px 0px;
+    font-size: 23px;
 }
 
 a {

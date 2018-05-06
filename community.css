@@ -94,6 +94,14 @@ button:hover{
     border: 0px;
 }
 
+input:focus {
+    outline-width: 0;
+}
+
+#find:focus{
+    outline-width: 0px;
+}
+
 .searchicon{
     position: absolute;
     left: 60px;
