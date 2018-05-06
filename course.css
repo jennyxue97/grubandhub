@@ -63,6 +63,10 @@ p {
     grid-column: 4;
 }
 
+#chat-input:focus{
+    outline-width: 0px;
+}
+
 .navbarmenu{
     display: table-cell;
     text-align: right;

@@ -1,11 +1,13 @@
 window.onload = function () {
     setUpVideo();
     addMaterialCheckboxes();
-
+    document.getElementById("chat-input").focus();
     document.getElementById("chat-input").addEventListener("keydown", function(e) {
         // Enter is pressed
         if (e.keyCode == 13) { askQuestion()};
     });
+
+
 };
 
 window.onkeydown = function(e) {
@@ -33,11 +35,17 @@ function askQuestion(){
     question.innerHTML = document.getElementById("chat-input").value;
     document.getElementById("chat-text").appendChild(question);
     document.getElementById("chat-input").value = "";
+    var responses = ["Sorry, the chat service is currently unavailable, please check back in a few minutes.",
+                    "I understand your frustration. Julienning veggies is a very difficult task.",
+                    "You should fry your egg for 1 minute!",
+                    "I normally add a teaspoon of salt.",
+                    "Yes that's correct!"]
     setTimeout(function () {
         var answer = document.createElement('div');
         answer.className = "chat-answer";
-        answer.innerHTML = "Sorry, the chat service is currently unavailable, please check back in a few minutes.";
+        answer.innerHTML = responses[Math.floor(Math.random() * 5)];
         document.getElementById("chat-text").appendChild(answer);
+        answer.scrollIntoView();
     }, 1000);
 }
 
