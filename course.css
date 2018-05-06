@@ -114,8 +114,9 @@ p {
     font-style: normal;
     font-size: 16px;
     background: white;
-    border: 1px solid;
+    border: 2px solid;
     border-color: var(--text-color);
+    border-radius: 15px;
     display: grid;
     grid-template-rows: 50% 50%;
 }
@@ -138,6 +139,7 @@ p {
     margin-left: 20px;
     margin-right: 20px;
     border: 1px solid;
+    border-radius: 5px;
     border-color: var(--text-color);
 }
 
@@ -174,21 +176,25 @@ p {
 
 .content {
     display: grid;
-    height: 95%;
+    height: 90%;
     grid-template-columns: 20% 60% 20%;
-    /* background: white;
-    border: 1px solid;
-    border-color: var(--text-color); */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: white;
+    border: 2px solid;
+    border-radius: 15px;
+    border-color: var(--text-color);
 }
 
 .left-content {
-    margin-top: 20px;
+    margin-top: 0px;
     display: grid;
     grid-auto-rows: 90% 10%;
     padding: 5px 20px 15px 20px;
     background: white;
-    border: 1px solid;
-    border-color: var(--text-color);
+    /* border: 2px solid; */
+    border-radius: 15px;
+    /* border-color: var(--text-color); */
 }
 
 .material-header {
@@ -210,10 +216,11 @@ p {
 .center-content {
     max-height: 100%;
     text-align: center;
-    margin: 20px 20px 0px 20px;
+    margin: 0px 20px 0px 20px;
     background: white;
-    border: 1px solid;
-    border-color: var(--text-color);
+    /* border: 2px solid; */
+    border-radius: 15px;
+    /* border-color: var(--text-color); */
 }
 
 .section-header {
@@ -228,7 +235,7 @@ p {
 .section-video {
     height: 85%;
     width: 90%;
-    border: 1px solid;
+    border: 2px solid;
     border-color: black;
 }
 
@@ -244,13 +251,14 @@ p {
 }
 
 .right-content {
-    margin-top: 20px;
+    margin-top: 0px;
     display: grid;
     grid-template-rows: 10% 73% 17%;
     padding: 5px 15px 5px 15px;
     background: white;
-    border: 1px solid;
-    border-color: var(--text-color);
+    /* border: 2px solid; */
+    border-radius: 15px;
+    /* border-color: var(--text-color); */
 }
 
 .help-header {
@@ -266,6 +274,7 @@ p {
     margin: 0px 5px 0px 5px;
     grid-template-rows: 90% 10%;
     border: 1px solid;
+    border-radius: 5px;
     border-color: black;
     overflow: hidden;
 }
@@ -279,6 +288,7 @@ p {
 
 .chat-input {
     border: 2px solid;
+    border-radius: 3px;
     border-color: silver;
     /* height: 20px; */
 }
@@ -294,6 +304,7 @@ p {
     width: 100%;
     height: 100%;
     border: 1px solid;
+    border-radius: 5px;
     background-color: var(--text-color);
     border-color: black;
     color: white;
@@ -312,6 +323,7 @@ p {
     text-align: right;
     width: 80%;
     border: 1px solid var(--text-color);
+    border-radius: 5px;
     margin: 10px 0px 0px 25px;
     padding: 5px;
 }
@@ -324,6 +336,7 @@ p {
     color: white;
     width: 80%;
     border: 1px solid var(--text-color);
+    border-radius: 5px;
     margin: 10px 0px 0px 2px;
     padding: 5px;
 }
