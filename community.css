@@ -159,9 +159,10 @@ input:focus {
     color: var(--text-color);
     padding: 10px;
     background-color: white;
-    border: 1px solid;
+    border: 2px solid;
     z-index: 100;
     position:absolute;
+    border-radius: 15px;
 
 }
 
