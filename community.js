@@ -17,6 +17,7 @@ window.onload = function () {
 
 const categories = ['Share','Help','Tips'];
 var showCategoryDrop = false;
+var filters = false;
 
 function addNewPost(){
     var data = getValidateForm();
@@ -56,7 +57,7 @@ function createDropdown(){
         var categoryOptions = document.createElement('table');
         categoryOptions.id = 'categoryOptions';
 
-        var buttons = createCategoryOptions();
+        var buttons = createCategoryOption();
 
         var row;
         for (var i=0; i<buttons.length;i++){
@@ -85,7 +86,29 @@ function createDropdown(){
 
 }
 
-function createCategoryOptions(){
+function applyFilter(){
+    if (!filters){
+        var tags = document.getElementById('tags');
+        var tag = document.createElement('button');
+        tag.id = 'filter'
+        tag.className = 'dropdowntoggle';
+        tag.innerHTML = 'Help';
+        tags.appendChild(tag);
+        tag.onclick = removeFilter;
+
+        document.getElementById('subtitle').innerHTML = "RESULTS";
+    }
+    closeCategoryOption();
+    filters = true;
+}
+
+function removeFilter(){
+    filters = false;
+    document.getElementById('filter').remove();
+    document.getElementById('subtitle').innerHTML = "MOST RECENT";
+}
+
+function createCategoryOption(){
     var buttons = []
     for (var i=0; i<categories.length;i++){
         var label = document.createElement('label');
@@ -117,7 +140,7 @@ function createCancelAndSubmitButton(){
     confirm.type = 'submit';
     confirm.innerHTML = 'confirm';
 
-    confirm.onclick = closeCategoryOption;
+    confirm.onclick = applyFilter;
     buttons.push(confirm);
     return buttons;
 }

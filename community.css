@@ -136,7 +136,7 @@ input:focus {
     width: 30%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 16px;
+    font-size: 1vw;
     color: var(--text-color);
     padding: 10px 0px 10px 0px;
     background-color: white;
@@ -151,11 +151,11 @@ input:focus {
 
 
 #categoryDropdown{
-    width: 15%;
+    width: 15vw;
     height: 8%;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 1vw;
     color: var(--text-color);
     padding: 10px;
     background-color: white;
@@ -163,7 +163,6 @@ input:focus {
     z-index: 100;
     position:absolute;
     border-radius: 15px;
-
 }
 
 #controls{
@@ -173,7 +172,7 @@ input:focus {
 .controlButton{
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 0.9vw;
     color: var(--text-color);
     margin: 1px;
     margin-top:14%;
@@ -184,12 +183,29 @@ input:focus {
     padding: 10px 0px 10px 35px;
 }
 
+#tags{
+    width: 100%;
+    height:100%;
+    display:block;
+}
+
+#filter{
+    width: 5vw;
+    height: 50%;
+    margin: 0px 10px 20px 0px;
+    padding: 1px;
+    float:left;
+    background-color: white;
+    font-size: 1vw;
+}
+
 .content{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 40px 50px;
     padding: 10px 0px 10px 0px;
+    float:left;
 }
 
 .post{

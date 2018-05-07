@@ -17,6 +17,10 @@ var showCuisines = false;
 var showTime = false;
 var showDifficultyDropdown = false;
 
+var cuisineTag = false;
+var timeTag = false;
+var difficultyTag = false;
+
 function submitForm(){
     var isValid = true;
     var query = document.getElementById("searchbar").value;
@@ -137,44 +141,67 @@ function closeTimeLimit(){
 }
 
 function applyFilters(){
-    if (document.getElementById('alfredo') != null){
-        document.getElementById('alfredo').remove();
-    }
-    if (document.getElementById('benedict') != null){
-        document.getElementById('benedict').remove();
-    }
-    if (document.getElementById('bunBoHue') != null){
-        document.getElementById('bunBoHue').remove();
-    }
-    if (document.getElementById('chicken') != null){
-        document.getElementById('chicken').remove();
-    }
-    if (document.getElementById('chickenAvocado') != null){
-        document.getElementById('chickenAvocado').remove();
-    }
+    if (!cuisineTag){
+        if (document.getElementById('alfredo') != null){
+            document.getElementById('alfredo').remove();
+        }
+        if (document.getElementById('benedict') != null){
+            document.getElementById('benedict').remove();
+        }
+        if (document.getElementById('bunBoHue') != null){
+            document.getElementById('bunBoHue').remove();
+        }
+        if (document.getElementById('chicken') != null){
+            document.getElementById('chicken').remove();
+        }
+        if (document.getElementById('chickenAvocado') != null){
+            document.getElementById('chickenAvocado').remove();
+        }
 
-    displayShrimpFriedRice();
-    var tags = document.getElementById('tags');
-    var tag = document.createElement('button');
-    tag.id = 'tag'
-    tag.className = 'dropdowntoggle';
-    tag.innerHTML = 'Chinese';
-    tags.appendChild(tag);
+        displayShrimpFriedRice();
+        var tags = document.getElementById('tags');
+        var tag = document.createElement('button');
+        tag.id = 'cuisineTag'
+        tag.className = 'dropdowntoggle';
+        tag.innerHTML = 'Chinese';
+        tags.appendChild(tag);
+        tag.onclick = removeCuisineTag;
+    }
     closeCuisineDropDown();
+    cuisineTag = true;
+}
+
+function removeCuisineTag(){
+    cuisineTag = false;
+    if (!difficultyTag && !cuisineTag && !timeTag){
+        window.location.href = "index.html";
+    }else{
+        document.getElementById('cuisineTag').remove();
+    }
 }
 
 function applyTimeLimit(){
-    // document.getElementById('alfredo').remove();
-    // document.getElementById('bunBoHue').remove();
-    // document.getElementById('chicken').remove();
-    displayShrimpFriedRice();
-    var tags = document.getElementById('tags');
-    var tag = document.createElement('button');
-    tag.id = 'tag'
-    tag.className = 'dropdowntoggle';
-    tag.innerHTML = '30 min';
-    tags.appendChild(tag);
+    if (!timeTag){
+        displayShrimpFriedRice();
+        var tags = document.getElementById('tags');
+        var tag = document.createElement('button');
+        tag.id = 'timeTag'
+        tag.className = 'dropdowntoggle';
+        tag.innerHTML = '30 min';
+        tags.appendChild(tag);
+        tag.onclick = removeTimeTag;
+    }
     closeTimeLimit();
+    timeTag = true;
+}
+
+function removeTimeTag(){
+    timeTag = false;
+    if (!difficultyTag && !cuisineTag && !timeTag){
+        window.location.href = "index.html";
+    }else{
+        document.getElementById('timeTag').remove();
+    }
 }
 
 function showTimeLimit(){
@@ -280,17 +307,27 @@ function closeDifficultyDropdown(){
 }
 
 function applyDifficulty(){
-    // document.getElementById('alfredo').remove();
-    // document.getElementById('bunBoHue').remove();
-    // document.getElementById('chicken').remove();
-    displayShrimpFriedRice();
-    var tags = document.getElementById('tags');
-    var tag = document.createElement('button');
-    tag.id = 'difficultyTag'
-    tag.className = 'dropdowntoggle';
-    tag.innerHTML = 'Intermediate';
-    tags.appendChild(tag);
+    if (!difficultyTag){
+        displayShrimpFriedRice();
+        var tags = document.getElementById('tags');
+        var tag = document.createElement('button');
+        tag.id = 'difficultyTag'
+        tag.className = 'dropdowntoggle';
+        tag.innerHTML = 'Intermediate';
+        tags.appendChild(tag);
+        tag.onclick = removeDifficultyTag;
+    }
     closeDifficultyDropdown();
+    difficultyTag = true;
+}
+
+function removeDifficultyTag(){
+    difficultyTag = false;
+    if (!difficultyTag && !cuisineTag && !timeTag){
+        window.location.href = "index.html";
+    }else{
+        document.getElementById('difficultyTag').remove();
+    }
 }
 
 function displayShrimpFriedRice(){
@@ -299,5 +336,5 @@ function displayShrimpFriedRice(){
     "<div class='foodfooter'> <div class='footerinfo' id='foodcuisine'> CHINESE </div>" + 
     "<div class='footerinfo' id='fooddifficulty'> INTERMEDIATE </div> <div class='footerinfo' id='fooddifficulty'>" +
     "30 MIN </div> </div> </div>";
-    document.getElementById("subtitle").innerHTML = "Results";
+    document.getElementById("subtitle").innerHTML = "RESULTS";
 }
