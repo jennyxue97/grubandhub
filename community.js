@@ -96,16 +96,31 @@ function applyFilter(){
         tags.appendChild(tag);
         tag.onclick = removeFilter;
 
+        removePosts();
+
         document.getElementById('subtitle').innerHTML = "RESULTS";
     }
     closeCategoryOption();
     filters = true;
 }
 
+function removePosts(){
+    var posts = document.getElementsByClassName('post');
+    var tips = document.getElementsByClassName('tip');
+
+    while (posts.length>0){
+        posts[0].parentNode.removeChild(posts[0]);
+    }
+
+    while (tips.length>0){
+        tips[0].parentNode.removeChild(tips[0]);
+    }
+}
+
+
 function removeFilter(){
     filters = false;
-    document.getElementById('filter').remove();
-    document.getElementById('subtitle').innerHTML = "MOST RECENT";
+    window.location.href = "community.html";
 }
 
 function createCategoryOption(){

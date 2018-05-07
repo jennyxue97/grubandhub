@@ -98,7 +98,7 @@ header {
 #find{
     font-family: 'Raleway', sans-serif;
     font-style: normal;
-    font-size: 16px;
+    font-size: 1vw;
     color: var(--text-color);
     padding: 10px 10px 10px 10px;
     background-color: white;
